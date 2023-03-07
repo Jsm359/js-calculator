@@ -1,0 +1,30 @@
+
+.root {
+
+}
+
+.calculator {
+    width: 300px;
+    height: auto;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.btn {
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    transition: 0.2s ease;
+    transform: scale(0.9);
+}
