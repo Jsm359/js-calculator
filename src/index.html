@@ -1,47 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="./static/styles.css">
+    <link rel="stylesheet" type="text/css" href="./static/styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>calculator</title>
   </head>
   <body>
-    <div class="root">
-      <div class="calculator">
-        <div class="result"></div>
-        <div class="buttons">
-          <div class="row">
-            <div class="btn">C</div>
-            <div class="btn">CE</div>
-            <div class="btn">/</div>
-            <div class="btn">*</div>
-          </div>
-          <div class="row">
-            <div class="btn">7</div>
-            <div class="btn">8</div>
-            <div class="btn">9</div>
-            <div class="btn">-</div>
-          </div>
-          <div class="row">
-            <div class="btn">4</div>
-            <div class="btn">5</div>
-            <div class="btn">6</div>
-            <div class="btn">+</div>
-          </div>
-          <div class="row">
-            <div class="btn">1</div>
-            <div class="btn">2</div>
-            <div class="btn">3</div>
-            <div class="equals">=</div>
-          </div>
-          <div class="row">
-            <div class="btn">0</div>
-            <div class="btn">.</div>
-          </div>
+  <script src="./static/index.js"></script>
+    <div class="content">
+      <div class="display">
+        <div id="calculate"></div>
+        <div id="result">0</div>
+      </div>
+      <div class="buttonContent">
+        <div class="fbtn">
+          <div class="clear" onclick="reset()">C</div>
+          <div class="del" onclick="clear()">del</div>
+          <div class="operator" onclick="addToList('/')">/</div>
+        </div>
+
+        <div class="fbtn">
+          <div class="num" onclick="addToList(7)">7</div>
+          <div class="num" onclick="addToList(8)">8</div>
+          <div class="num" onclick="addToList(9)">9</div>
+          <div class="operator" onclick="addToList('+')">+</div>
+        </div>
+
+        <div class="fbtn">
+          <div class="num" onclick="addToList(4)">4</div>
+          <div class="num" onclick="addToList(5)">5</div>
+          <div class="num" onclick="addToList(6)">6</div>
+          <div class="operator" onclick="addToList('-')">-</div>
+        </div>
+
+        <div class="fbtn">
+          <div class="num" onclick="addToList(1)">1</div>
+          <div class="num" onclick="addToList(2)">2</div>
+          <div class="num" onclick="addToList(3)">3</div>
+          <div class="operator" onclick="addToList('*')">*</div>
+        </div>
+
+        <div class="fbtn">
+          <div class="num" onclick="addToList('.')">,</div>
+          <div class="num" onclick="addToList(0)">0</div>
+          <div class="equal" onclick="calculate(list)">=</div>
         </div>
       </div>
     </div>
   </body>
-  <script type="module" src="./static/index.js"></script>
+
 </html>
